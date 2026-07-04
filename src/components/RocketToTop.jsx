@@ -2,11 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Rocket } from "lucide-react";
 
-/**
- * Floating control that appears once the visitor has scrolled past the hero.
- * On click the rocket "launches" upward before the page smooth-scrolls home,
- * a small on-theme flourish for returning to the top.
- */
+
 export default function RocketToTop() {
   const [visible, setVisible] = useState(false);
   const [launching, setLaunching] = useState(false);
@@ -48,7 +44,7 @@ export default function RocketToTop() {
             className={`h-5 w-5 -rotate-45 text-ignite ${launching ? "animate-launch" : ""}`}
             strokeWidth={2.2}
           />
-          {/* Exhaust plume, visible on hover */}
+         
           <span className="absolute bottom-2 left-1/2 h-3 w-1 -translate-x-1/2 rounded-full bg-gradient-to-b from-ignite to-transparent opacity-0 transition-opacity group-hover:opacity-90" />
         </motion.button>
       )}

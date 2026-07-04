@@ -1,11 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Animates a numeric value up from zero the first time it scrolls into view.
- * Accepts pre-formatted strings like "6,200+", "₹18L" or "42" — it splits off
- * a non-numeric prefix/suffix, counts the number, and re-inserts thousands
- * separators. Falls back to the final value under prefers-reduced-motion.
- */
 export default function CountUp({ value, duration = 1600, className = "" }) {
   const match = String(value).match(/^(\D*?)([\d,]+)(.*)$/);
   const prefix = match ? match[1] : "";

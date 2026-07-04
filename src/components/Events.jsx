@@ -39,7 +39,7 @@ export default function Events() {
           </p>
         </Reveal>
 
-        {/* Filter pills */}
+    
         <Reveal delay={0.1} className="mt-8 flex flex-wrap gap-2">
           {CATEGORIES.map((cat) => (
             <button

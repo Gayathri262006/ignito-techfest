@@ -7,8 +7,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#home");
-  // While a click-scroll is in flight, ignore the scroll-spy so the pill
-  // doesn't flicker through every section it passes on the way to the target.
+ 
   const lockUntil = useRef(0);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Scroll-spy: highlight the nav link for whichever section is in view.
+  
   useEffect(() => {
     const sections = NAV_LINKS.map((l) => document.getElementById(l.href.slice(1))).filter(Boolean);
     if (sections.length === 0) return;
@@ -33,7 +32,7 @@ export default function Navbar() {
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         if (inView[0]) setActive(`#${inView[0].target.id}`);
       },
-      // Thin band around the upper-middle of the viewport acts as the cursor.
+     
       { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
     );
 
@@ -44,7 +43,7 @@ export default function Navbar() {
   function handleClick(href) {
     setActive(href);
     setOpen(false);
-    // Hold the scroll-spy for the duration of the smooth scroll.
+    
     lockUntil.current = Date.now() + 900;
   }
 
@@ -140,8 +139,8 @@ export default function Navbar() {
                 ))}
                 <li className="p-2">
                   <a
-                    href="#contact"
-                    onClick={() => handleClick("#contact")}
+                    href="#events"
+                    onClick={() => handleClick("#events")}
                     className="btn-glass-primary block rounded-xl px-4 py-3 text-center font-display text-xs font-bold uppercase tracking-widest text-white-a"
                   >
                     Register

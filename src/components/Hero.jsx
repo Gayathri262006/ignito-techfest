@@ -12,11 +12,9 @@ export default function Hero() {
     >
       <StarField />
 
-      {/* Ambient nebula glow */}
       <div className="pointer-events-none absolute -top-32 right-[-10%] h-[520px] w-[520px] animate-pulse-glow rounded-full bg-nebula/30 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[-10%] left-[-10%] h-[420px] w-[420px] animate-pulse-glow rounded-full bg-ignite/20 blur-3xl [animation-delay:1.5s]" />
 
-      {/* Orbit signature — right side, hidden on small screens for focus */}
       <div className="pointer-events-none absolute right-[-120px] top-1/2 hidden h-[620px] w-[620px] -translate-y-1/2 md:right-[-60px] md:block lg:right-[0px]">
         <div className="absolute inset-0 rounded-full border border-nebula-soft/20 animate-spin-slow">
           <span className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-ignite shadow-[0_0_14px_3px_rgba(255,90,54,0.8)]" />

@@ -43,7 +43,7 @@ export default function Schedule() {
             ))}
           </Reveal>
 
-          {/* Timeline items */}
+          
           <div className="relative">
             <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-nebula-soft/50 via-white/10 to-transparent" />
             <div className="space-y-6">

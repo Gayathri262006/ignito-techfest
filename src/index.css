@@ -104,17 +104,18 @@
 
 html {
   scroll-behavior: smooth;
-  /* clip (not hidden) prevents horizontal scroll without creating a
-     scroll container, so fixed elements and smooth scroll keep working */
-  overflow-x: clip;
 }
 
 body {
   background-color: var(--color-void);
   color: var(--color-white-a);
   font-family: var(--font-body);
-  overflow-x: clip;
+  overflow-x: hidden;
   max-width: 100%;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
 }
 
 ::selection {

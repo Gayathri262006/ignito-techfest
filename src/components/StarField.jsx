@@ -1,10 +1,6 @@
 import { useEffect, useRef } from "react";
 
-/**
- * Lightweight canvas starfield with slow parallax drift, gentle mouse
- * parallax (depth), and occasional shooting stars.
- * Respects prefers-reduced-motion by freezing motion.
- */
+
 export default function StarField({ density = 0.00012, className = "" }) {
   const canvasRef = useRef(null);
 
@@ -47,7 +43,7 @@ export default function StarField({ density = 0.00012, className = "" }) {
     }
 
     function spawnShootingStar() {
-      // Enter from the top edge, streak down-left at a shallow angle.
+     
       const startX = width * (0.3 + Math.random() * 0.7);
       const angle = (Math.PI / 180) * (110 + Math.random() * 30);
       const speed = 9 + Math.random() * 6;
@@ -65,7 +61,7 @@ export default function StarField({ density = 0.00012, className = "" }) {
     function draw(time) {
       ctx.clearRect(0, 0, width, height);
 
-      // Ease the smoothed pointer toward its target.
+      
       pointer.x += (pointer.tx - pointer.x) * 0.05;
       pointer.y += (pointer.ty - pointer.y) * 0.05;
 
@@ -91,7 +87,7 @@ export default function StarField({ density = 0.00012, className = "" }) {
       }
 
       if (!prefersReduced) {
-        // Occasionally launch a shooting star.
+       
         if (shootingStars.length < 2 && Math.random() < 0.004) {
           spawnShootingStar();
         }
@@ -126,7 +122,7 @@ export default function StarField({ density = 0.00012, className = "" }) {
     }
 
     function onPointerMove(e) {
-      // Map pointer to a small offset; far stars barely move, near stars drift.
+      
       pointer.tx = (e.clientX / window.innerWidth - 0.5) * 40;
       pointer.ty = (e.clientY / window.innerHeight - 0.5) * 40;
     }

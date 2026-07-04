@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 
-/**
- * Thin "launch trajectory" progress bar pinned to the very top of the page.
- * Fills left-to-right as the visitor scrolls, with a glowing head that reads
- * like a craft climbing its flight path.
- */
+
 export default function ScrollProgress() {
   const [progress, setProgress] = useState(0);
 
