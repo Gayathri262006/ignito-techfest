@@ -191,6 +191,17 @@ body {
   border: 1px solid rgba(167, 139, 250, 0.15);
 }
 
+/* More opaque frosted panel for the mobile menu so links stay readable
+   over the animated content behind it (backdrop-blur can't be relied on
+   for contrast on all mobile browsers). */
+.glass-menu {
+  background: rgba(8, 9, 18, 0.99);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  box-shadow: 0 20px 40px -16px rgba(0, 0, 0, 0.85);
+}
+
 /* ---- Glass buttons ---- */
 /* Neutral frosted glass — secondary actions, filter pills, card buttons */
 .btn-glass {

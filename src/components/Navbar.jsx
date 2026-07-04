@@ -124,7 +124,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, height: "auto" }}
               exit={{ opacity: 0, y: -12, height: 0 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="glass-panel mt-2 overflow-hidden rounded-2xl lg:hidden"
+              className="glass-menu mt-2 overflow-hidden rounded-2xl lg:hidden"
             >
               <ul className="flex flex-col divide-y divide-white/5 p-2">
                 {NAV_LINKS.map((link) => (
